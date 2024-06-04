@@ -1,130 +1,162 @@
-*{
+/* Reset CSS */
+* {
     margin: 0;
     padding: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
 }
 
-.row{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.col-2{
-    flex-basis: 50%;
-    min-width: 300px;
-}
-
-.col-2 img{
-    max-width: 100%;
-    padding: 50px 0;
-}
-
-.col-2 h1{
-    font-size: 50px;
-    line-height: 60px;
-    margin: 25px 0;
-}
-
-.btn{
-    display: inline-block;
-    background: #ff523b;
-    color: #fff;
-    padding: 8px 30px;
-    margin: 30px 0;
-    border-radius: 30px;
-    text-decoration: none;
-}
-
-.header{
-    background: radial-gradient(#fff,#ffd6d6);
-}
-
-body{
+/* General styles */
+body {
     font-family: 'Poppins', sans-serif;
 }
 
-img{
-    mix-blend-mode: multiply;
-}
-
-.header .row{
-    margin-top: 70px;
-}
-
-.navbar{
-    display: flex;
-    align-items: center;
-    padding: 40px;
-    padding: 20px;
-}
-
-nav{
-    flex: 1;
-    text-align: right;
-}
-
-nav ul{
-    display: inline-block;
-    list-style-type: none;
-}
-
-nav ul li{
-    display: inline-block;
-    margin-right: 20px;
-}
-
-a{
+a {
     text-decoration: none;
-    color: #555;
+    color: white;
 }
 
-p{
-    color: #555;
+p {
+    color: #dc5f00;
 }
 
-.container{
+/* Container styles */
+.container {
     max-width: 1300px;
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
 }
 
-.categories{
-    margin: 70px 0;
-}
-
-.col-3{
-    flex-basis: 30%;
-    min-width: 250px;
-    margin-bottom: 30px;
-}
-
-.col-3 img{
-    width: 100%;
-}
-
-.small-container{
+.small-container {
     max-width: 1080px;
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
 }
 
-.col-4{
-    flex-basis: 25%;
+/* Navbar styles */
+.navbar-nav, .nav-link, .navbar-brand {
+    font-size: 27px;
+    color: #eeeeee;
+}
+
+.navbar {
+    font-size: 30px;
+}
+
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+.nav-link {
+    color: #dc5f00 !important;
+}
+
+/* Header styles */
+.header {
+    background: #373a40;
+    color: #fff;
+    height: auto;
+    padding: 20px 0;
+}
+
+.navbar-brand h5 {
+    color: #eeeeee;
+    font-size: 30px;
+}
+
+/* Row styles */
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.rowheader {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background: #373a40;
+    padding: 40px 80px;
+    text-align: center;
+}
+
+.row2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Column styles */
+.col-2, .col-3, .col-4 {
+    flex-basis: 50%;
+    min-width: 300px;
     padding: 10px;
+}
+
+.col-2 img, .col-3 img, .col-4 img {
+    max-width: 100%;
+    height: auto;
+}
+
+.col-2 h1 {
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+    color: #eeeeee;
+}
+
+.col-4 {
+    flex-basis: 25%;
     min-width: 200px;
     margin-bottom: 50px;
     transition: transform 0.5s;
 }
 
-.col-3 img{
-    width: 100%;
+.categories {
+    margin: 50px 0px;
 }
 
-.title{
+/* Button styles */
+.btn {
+    display: inline-block;
+    background: #686d76;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 25px;
+    border: none;
+}
+
+.btn-primary {
+    background: #dc5f00;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #ff7700;
+}
+
+.btn-danger {
+    background-color: red;
+    color: white;
+    font-weight: bolder;
+    border-radius: 20px;
+}
+
+.btn-danger:hover {
+    background-color: red;
+}
+
+/* Title styles */
+.title {
     text-align: center;
     margin: 0 auto 80px;
     position: relative;
@@ -132,9 +164,9 @@ p{
     color: #555;
 }
 
-.title::after{
+.title::after {
     content: '';
-    background: #ff523b;
+    background: #dc5f00;
     width: 80px;
     height: 5px;
     border-radius: 5px;
@@ -142,29 +174,483 @@ p{
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-
 }
 
-h4{
-    color: #555;
-    font-weight: normal;
-}
-
-.col-4 p{
-    font-size: 14PX;
-
-}
-
-.offer{
-    background: radial-gradient(#fff,#ffd6d6);
-    margin-top: 80px;
-    padding: 30px 0;
-}
-
-.col-2 .offer{
+.col-2 .offer {
     padding: 50px;
 }
 
-small{
+/* Footer styles */
+.footer {
+    background: #373a40;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 60px 0 20px;
+    width: 100%;
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.footer p {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.col-3 {
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+.footer-col-2, .footer-col-3, .footer-col-4 {
+    min-width: 250px;
+    margin-bottom: 20px;
+    flex: 1;
+    text-align: center;
+}
+
+.footer-col-2 img {
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.app-logo {
+    margin-top: 20px;
+}
+
+.app-logo img {
+    width: 140px;
+}
+
+/* Specific styles for the account button */
+.account-btn {
+    background: none;
+    border: none;
+    color: white;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.account-btn:hover, .account-btn:focus, .account-btn:active {
+    background: none;
+    border: none;
+    color: white;
+    outline: none;
+    box-shadow: none;
+}
+
+/* Specific styles for the dropdown menu */
+.btn-group.dropstart .dropdown-menu {
+    min-width: 200px;
+    background-color: white;
+    color: black;
+}
+
+.btn-group.dropstart .dropdown-item {
+    color: black;
+}
+
+.btn-group.dropstart .dropdown-item:hover {
+    background-color: #112d4e;
+    color: #fff;
+}
+
+.btn-group.dropstart .dropdown-divider {
+    border-color: #112d4e;
+}
+
+.btn-group {
+    margin-right: 230px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 992px) {
+    .navbar-brand, .navbar-nav, .nav-link {
+        font-size: 20px;
+    }
+
+    .col-2 h1 {
+        font-size: 40
+        px;
+        line-height: 50px;
+    }
+
+    .btn {
+        font-size: 20px;
+    }
+
+    .header {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .rowheader {
+        padding-left: 40px;
+        padding-top: 20px;
+        flex-direction: column;
+    }
+
+    .col-3 img, .col-4 img {
+        max-width: 80%; /* Adjust the image size */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand, .navbar-nav, .nav-link {
+        font-size: 18px;
+    }
+
+    .col-2 h1 {
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    .btn {
+        font-size: 18px;
+    }
+
+    .col-2, .col-3, .col-4 {
+        flex-basis: 100%;
+    }
+
+    .footer .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rowheader {
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+
+    .btn-group {
+        margin-right: 0;
+    }
+
+     .col-3 img, .col-4 img {
+        max-width: 70%; /* Adjust the image size */
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand, .navbar-nav, .nav-link {
+        font-size: 16px;
+    }
+
+    .col-2 h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .btn {
+        font-size: 16px;
+    }
+
+    .rowheader {
+        padding-left: 10px;
+        padding-top: 5px;
+    }
+
+    .footer .container {
+        padding: 0 10px;
+    }
+
+    .col-3 img, .col-4 img {
+        max-width: 60%; /* Adjust the image size */
+    }
+}
+
+.navbar-toggler {
+    padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
+    font-size: 30px;
+    line-height: 1;
+    color:#eeeeee;
+    background-color: transparent;
+    border:#eeeeee;
+    border-radius: #eeeeee;
+    transition: #eeeeee;
+}
+
+.buybtn {
+    margin-left: 85px;
+    text-decoration: none;
+    border-radius: 6vh;
+    font-size: 15px;
+    background-color: #373a40;
+    border: 3px solid #373a40;
+    color: white;
+    margin-top: 5px;
+    width: 100px;
+    padding: 3px 8px;
+}
+
+.buybtn:hover{
+    background-color: #5f6778;
+    border: 3px solid #5f6778;
+}
+
+
+select {
+    border: 1px solid #032eb9cc;
+    padding: 5px;
+    float: right;
+}
+
+select:focus {
+    outline: none;
+}
+
+.row-2 {
+    justify-content: space-between;
+    margin: 100px auto 50px;
+}
+
+.col-4 {
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+}
+
+.col-4 img {
+    width: 100%;
+}
+
+.small-container {
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/* Set the same height and width for images within the specified section */
+.small-container img {
+    width: 100%;
+    height: auto;
+}
+
+/* Specific styles for images within columns */
+.small-container .col-4 img {
+    width: 100%;
+    height: 100%; /* Ensure images fill their container */
+    object-fit: cover; /* Maintain aspect ratio and fill container */
+}
+
+p {
+    color: #eeeeee;
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+h4 {
     color: #555;
+    font-weight: normal;
+    font: 20px;
+}
+
+.col-4 p {
+    font-size: 20px;
+}
+
+.rating .fa {
+    color: black;
+}
+
+.col-4:hover {
+    transform: translate(-5px);
+}
+
+.page-btn {
+    margin: 0 auto 80px;
+}
+
+.page-btn span {
+    display: inline-block;
+    border: 1px solid black;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    color: black;
+}
+
+.page-btn span:hover {
+    background-color: rgb(255, 196, 0);
+    color: #fff;
+}
+
+a {
+    text-decoration: #0c038a;
+}
+
+.title {
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: black;
+    margin-top: 100px;
+}
+
+.title::after {
+    content: "";
+    background-color: #dc5f00;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.testimonial {
+    padding-top: 100px;
+}
+
+.testimonial .col-3 {
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.testimonial .col-3 img {
+    width: 50px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+
+.testimonial .col-3:hover {
+    transform: translateY(-10px);
+}
+
+.fa .fa-quote-left {
+    font-size: 34px;
+    color: #0c038a;
+}
+
+/* Corrected selector */
+.testimonial .col-3 p {
+    font-size: 12px;
+    margin: 12px 0;
+    color: #777;
+}
+
+.testimonial .col-3 h3 {
+    font-weight: 600;
+    color: #555;
+    font-size: 16px;
+}
+
+
+
+.iconCart {
+    height: 40px;
+    width: 40px;
+    /* Added semicolon */
+}
+
+#footh4 {
+    color: white;
+    font-size: 30px;
+}
+
+.rating-and-button {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.rating {
+    margin-right: 10px;
+}
+
+.buybtn {
+    margin-left: auto; 
+}
+
+.viewdetailsbtn {
+    margin-left: 85px;
+    text-decoration: none;
+    border-radius: 6vh;
+    font-size: 15px;
+    background-color: #dc5f00;
+    border: 3px solid #dc5f00;
+    color: white;
+    margin-top: 5px;
+    width: 100px;
+    padding: 3px 8px;
+}
+
+.viewdetailsbtn:hover {
+    background-color: #ff882d;
+    border: 3px solid #ff882d;
+    color: #eeeeee;
+}
+
+.viewdetailsbtn {
+    margin-left: auto; /* This pushes the button to the right */
+}
+
+.price {
+    color: #373a40;
+}
+/* Adjusted CSS for smaller screens */
+@media (max-width: 768px) {
+    .rating-and-button {
+        text-align: center; /* Center the buttons horizontally */
+    }
+
+    .buybtn,
+    .viewdetailsbtn {
+        display: inline-block; /* Display buttons inline */
+        width: 120px;
+        margin: 5px; /* Add some margin between the buttons */
+    }
+    .viewdetailsbtn {
+    width: 120px;
+    text-align: centers;
+    }
+    .col-3{
+        margin-left: 90px;
+    }
 }
